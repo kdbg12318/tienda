@@ -1,0 +1,28 @@
+let carrito = [];
+let total = 0;
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    total += precio;
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const listaCarrito = document.getElementById('listaCarrito');
+    listaCarrito.innerHTML = ''; // Limpiar lista
+
+    carrito.forEach(producto => {
+        const item = document.createElement('li');
+        item.textContent = `${producto.nombre} - $${producto.precio}`;
+        listaCarrito.appendChild(item);
+    });
+
+    document.getElementById('total').textContent = `Total: $${total.toFixed(2)}`;
+}
+
+function finalizarCompra() {
+    alert('¡Gracias por tu compra!');
+    carrito = [];
+    total = 0;
+    actualizarCarrito();
+}

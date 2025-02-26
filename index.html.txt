@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Mi Tienda Online</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="productos">
+        <h2>Productos Disponibles</h2>
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>$10.00</p>
+            <button onclick="agregarAlCarrito('Producto 1', 10)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>$15.00</p>
+            <button onclick="agregarAlCarrito('Producto 2', 15)">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito</h2>
+        <ul id="listaCarrito">
+            <!-- Aquí se mostrarán los productos agregados -->
+        </ul>
+        <p id="total">Total: $0.00</p>
+        <button onclick="finalizarCompra()">Finalizar compra</button>
+    </section>
+
+    <footer id="contacto">
+        <h3>Contacto</h3>
+        <p>Email: contacto@mitienda.com</p>
+        <p>Teléfono: +123 456 789</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
